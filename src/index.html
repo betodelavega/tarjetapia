@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pia ::: Mis 15 años :::</title>
+    <title>Pia ::: baby shower :::</title>
     <meta name="theme-color" content="#C6D7CF" />
 
     <!-- Fonts -->
@@ -27,44 +27,60 @@
     <!-- Pantalla de bienvenida -->
     <div id="splash-screen">
       
-      <h1>Bienvenidos a la fiesta de Pia</h1>
+      <h1>baby shower SOFIA</h1>
       <button id="enter-button">INGRESAR</button>
       <div id="heart-loader"></div>
     </div>
 
     <!-- Contenido principal -->
-    <div id="main-content">
+    
         <header>
+          <div id="main-content">
             <div class="portada">
-                <img class="imagen-portada" src="./asset/img/portada.jpeg" alt="" />
+                <img class="imagen-portada" src="./asset/img/1111.png" alt="" />
                 <div class="boxNombreFecha">
-                    <span class="fecha">01.03.2025</span>
+                    <span class="fecha">22.02.2025</span>
                     <img class="tiara" src="./asset/img/tiara.png" alt="">
-                    <h1>Pia</h1>
-                    <h2>Mis 15 años</h2>
+                    <h1>Sofia</h1>
+                    <h2>baby shower</h2>
                     <div class="frace-portada">
                         <p>
-                            <img class="comillas-blancas" src="./asset/img/comillas blancas.png" alt="" />
+                            <img class="comillas-blancas" src="./asset/img/comillas.png" alt="" />
                             <br />TE INVITO A COMPARTIN ESTE MOMENTO TAN ESPACIAL<br />
-                            <img class="comillas-blancas2" src="./asset/img/comillas blancas.png" alt="" />
+                            <img class="comillas-blancas2" src="./asset/img/comillas.png" alt="" />
                         </p>
                         <img class="arrow" src="./asset/img/arrow abajo.png" alt="">
                     </div>
                 </div>
             </div>
-            
-    </header>
-      <main>
+          </div>
+</header>
+
+<main class="main-container">
+
+  <div class="cuentaRegresiva"><h3>
+    ¡Faltan pocos días para la fiesta! 
+  </h3>
+  <h3>Cuenta regresiva</h3>
+</div>
+  <div class="conteo-regresivo">
+  <!-- Elemento para la cuenta regresiva -->
+   <span id="countdown"></span>
+   <div class="heart" id="heart"></div>
+  </div>
+  
+    
+
         <section class="section">
-          <h2>¡Hola!</h2>
-          <p>
-            Hola, soy Pia y quiero invitarlos a mi fiesta de 15 años. Será una
-            noche mágica llena de sorpresas y momentos inolvidables. ¡No te lo
+          <h3>¡Hola!</h3>
+          <h4>
+            Hola, soy Sofia y quiero invitarlos a baby shower. Será una
+            tarde mágica llena de sorpresas y momentos inolvidables. ¡No te lo
             pierdas!
-          </p>
+          </h4>
         </section>
         <section class="section">
-          <h2>Programa</h2>
+          <h3>Programa</h3>
           <ul>
             <li>18:00 - Recepción de invitados</li>
             <li>19:00 - Cena</li>
@@ -73,21 +89,32 @@
             <li>22:00 - Fin de la fiesta</li>
           </ul>
         </section>
+        
         <section class="section">
           <h2>Ubicación</h2>
-          <p>
-            La fiesta se llevará a cabo en el salón de eventos "El jardín de
-            Pia", ubicado en la calle 15 de septiembre, número 123.
-          </p>
-        </section>
+          <div class="card">
+              <div class="card-body">
+                  <h5 class="card-title">Ubicación de la fiesta</h5>
+                  <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019112739702!2d-122.4194154846816!3d37.77492927975971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c5b9b1e1f%3A0x4c8b0b6e6f8b1e1f!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2s!4v1633024800000!5m2!1sen!2s"
+                      width="100%"
+                      height="300"
+                      style="border:0;"
+                      allowfullscreen=""
+                      loading="lazy"
+                  ></iframe>
+              </div>
+          </div>
+      </section>
         <section class="section">
-          <h2>Confirmación</h2>
-          <p>
+          <h3>Confirmación</h3>
+          <h4>
             Por favor, confirma tu asistencia antes del 15 de febrero. Puedes
-            hacerlo llamando al número 123456789 o enviando un correo
-            electrónico a
-      </main>
-    </div>
+            hacerlo llamando al número 123456789 o enviando un correo a la "" </h4>
+        </section>
+        
+</main>
+
 
     <!-- Música de fondo -->
     <!-- Reproductor de YouTube -->
@@ -112,6 +139,35 @@
             document.getElementById('background-music').play();
           });
       });
+
+       // Función de cuenta regresiva
+       function countdown() {
+                const countDownDate = new Date("febr 22, 2025 19:44:00").getTime();
+                const countdownElement = document.getElementById("countdown");
+
+                const x = setInterval(function() {
+                    const now = new Date().getTime();
+                    const distance = countDownDate - now;
+
+                    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                    countdownElement.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+                    if (distance < 0) {
+                        clearInterval(x);
+                        countdownElement.innerHTML = "LLEGO EL GRAN DIA";
+                        countdownElement.classList.add("gran-dia"); // Aplica la clase para el estilo
+                        heartElement.style.display = "block"; // Muestra el corazón
+                    }
+                }, 1000);
+            }
+
+            countdown(); // Inicia la cuenta regresiva
+
     </script>
+    
   </body>
 </html>
